@@ -154,7 +154,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI Historic" size="14" style="3"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Nombre del alumno :"/>
+            <Property name="text" type="java.lang.String" value="Codigo del alumno :"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel2">

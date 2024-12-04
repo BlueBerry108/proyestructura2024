@@ -150,7 +150,7 @@ public class RegistroNotasxCurso extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 153));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 3, 14)); // NOI18N
-        jLabel1.setText("Nombre del alumno :");
+        jLabel1.setText("Codigo del alumno :");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Historic", 3, 14)); // NOI18N
         jLabel2.setText("Nombre del curso : ");
