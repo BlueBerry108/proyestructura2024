@@ -36,11 +36,13 @@ public class Principal extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        btnEditar = new javax.swing.JButton();
-        btnEditar1 = new javax.swing.JButton();
-        btnEditar2 = new javax.swing.JButton();
-        btnEditar3 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnRegistrarAlumnos = new javax.swing.JButton();
+        bntRegistrarCursos = new javax.swing.JButton();
+        btnReporteNotas = new javax.swing.JButton();
+        btnRegistrarNotas = new javax.swing.JButton();
+        btnReporteNotasXCurso = new javax.swing.JButton();
+        btnEditarNotas = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -49,38 +51,51 @@ public class Principal extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 204, 153));
 
-        btnEditar.setText("Registrar Alumnos");
-        btnEditar.addActionListener(new java.awt.event.ActionListener() {
+        btnRegistrarAlumnos.setFont(new java.awt.Font("Eras Bold ITC", 0, 14)); // NOI18N
+        btnRegistrarAlumnos.setText("Registrar Alumnos en Cursos");
+        btnRegistrarAlumnos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditarActionPerformed(evt);
+                btnRegistrarAlumnosActionPerformed(evt);
             }
         });
 
-        btnEditar1.setText("Registrar Cursos");
-        btnEditar1.addActionListener(new java.awt.event.ActionListener() {
+        bntRegistrarCursos.setFont(new java.awt.Font("Eras Bold ITC", 0, 14)); // NOI18N
+        bntRegistrarCursos.setText("Registrar Cursos y Alumnos");
+        bntRegistrarCursos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditar1ActionPerformed(evt);
+                bntRegistrarCursosActionPerformed(evt);
             }
         });
 
-        btnEditar2.setText("Reporte de notas");
-        btnEditar2.addActionListener(new java.awt.event.ActionListener() {
+        btnReporteNotas.setFont(new java.awt.Font("Eras Bold ITC", 0, 14)); // NOI18N
+        btnReporteNotas.setText("Reporte de notas");
+        btnReporteNotas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditar2ActionPerformed(evt);
+                btnReporteNotasActionPerformed(evt);
             }
         });
 
-        btnEditar3.setText("Registrar Notas");
-        btnEditar3.addActionListener(new java.awt.event.ActionListener() {
+        btnRegistrarNotas.setFont(new java.awt.Font("Eras Bold ITC", 0, 14)); // NOI18N
+        btnRegistrarNotas.setText("Registrar Notas");
+        btnRegistrarNotas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditar3ActionPerformed(evt);
+                btnRegistrarNotasActionPerformed(evt);
             }
         });
 
-        jButton1.setText("Mostrar Notas");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnReporteNotasXCurso.setFont(new java.awt.Font("Eras Bold ITC", 0, 14)); // NOI18N
+        btnReporteNotasXCurso.setText("Mostrar Notas");
+        btnReporteNotasXCurso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnReporteNotasXCursoActionPerformed(evt);
+            }
+        });
+
+        btnEditarNotas.setFont(new java.awt.Font("Eras Bold ITC", 0, 14)); // NOI18N
+        btnEditarNotas.setText("Editar Notas");
+        btnEditarNotas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditarNotasActionPerformed(evt);
             }
         });
 
@@ -89,30 +104,44 @@ public class Principal extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(49, 49, 49)
+                .addGap(14, 14, 14)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(btnEditar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnEditar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnEditar3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnEditar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(708, Short.MAX_VALUE))
+                    .addComponent(bntRegistrarCursos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnEditarNotas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(40, 40, 40)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnRegistrarAlumnos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnReporteNotas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(40, 40, 40)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnRegistrarNotas, javax.swing.GroupLayout.DEFAULT_SIZE, 181, Short.MAX_VALUE)
+                    .addComponent(btnReporteNotasXCurso, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {bntRegistrarCursos, btnEditarNotas, btnRegistrarAlumnos, btnRegistrarNotas, btnReporteNotas, btnReporteNotasXCurso});
+
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(btnEditar1)
-                .addGap(18, 18, 18)
-                .addComponent(btnEditar)
-                .addGap(25, 25, 25)
-                .addComponent(btnEditar3)
-                .addGap(18, 18, 18)
-                .addComponent(btnEditar2)
-                .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addContainerGap(208, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(40, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bntRegistrarCursos)
+                    .addComponent(btnRegistrarAlumnos)
+                    .addComponent(btnRegistrarNotas))
+                .addGap(148, 148, 148)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnReporteNotasXCurso)
+                    .addComponent(btnReporteNotas)
+                    .addComponent(btnEditarNotas, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(69, 69, 69))
         );
+
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {bntRegistrarCursos, btnEditarNotas, btnRegistrarAlumnos, btnRegistrarNotas, btnReporteNotas, btnReporteNotasXCurso});
+
+        jLabel1.setFont(new java.awt.Font("Eras Bold ITC", 3, 24)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Bienvenido, Realice sus operaciones!");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -120,15 +149,19 @@ public class Principal extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 810, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(56, 56, 56)
+                .addGap(48, 48, 48)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(44, 44, 44))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 520));
@@ -136,31 +169,36 @@ public class Principal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
+    private void btnRegistrarAlumnosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarAlumnosActionPerformed
       RegistroAlumnosxcurso raxc = new RegistroAlumnosxcurso();
       raxc.setVisible(true);
 
-    }//GEN-LAST:event_btnEditarActionPerformed
+    }//GEN-LAST:event_btnRegistrarAlumnosActionPerformed
 
-    private void btnEditar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditar1ActionPerformed
+    private void bntRegistrarCursosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntRegistrarCursosActionPerformed
         RegistroCursoAlumno rca = new RegistroCursoAlumno();
         rca.setVisible(true);
-    }//GEN-LAST:event_btnEditar1ActionPerformed
+    }//GEN-LAST:event_bntRegistrarCursosActionPerformed
 
-    private void btnEditar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditar2ActionPerformed
+    private void btnReporteNotasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteNotasActionPerformed
        ReporteNotaXCurso r = new ReporteNotaXCurso();
        r.setVisible(true);
-    }//GEN-LAST:event_btnEditar2ActionPerformed
+    }//GEN-LAST:event_btnReporteNotasActionPerformed
 
-    private void btnEditar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditar3ActionPerformed
+    private void btnRegistrarNotasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarNotasActionPerformed
         RegistroNotasxCurso r = new RegistroNotasxCurso();
         r.setVisible(true);
-    }//GEN-LAST:event_btnEditar3ActionPerformed
+    }//GEN-LAST:event_btnRegistrarNotasActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnReporteNotasXCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteNotasXCursoActionPerformed
         MostrarNotaxXalumno n =new MostrarNotaxXalumno();
         n.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnReporteNotasXCursoActionPerformed
+
+    private void btnEditarNotasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarNotasActionPerformed
+        EditarNotasXCurso e = new EditarNotasXCurso();
+        e.setVisible(true);
+    }//GEN-LAST:event_btnEditarNotasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -207,11 +245,13 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnEditar;
-    private javax.swing.JButton btnEditar1;
-    private javax.swing.JButton btnEditar2;
-    private javax.swing.JButton btnEditar3;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton bntRegistrarCursos;
+    private javax.swing.JButton btnEditarNotas;
+    private javax.swing.JButton btnRegistrarAlumnos;
+    private javax.swing.JButton btnRegistrarNotas;
+    private javax.swing.JButton btnReporteNotas;
+    private javax.swing.JButton btnReporteNotasXCurso;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

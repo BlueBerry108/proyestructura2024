@@ -229,8 +229,8 @@ public class EditarNotasXCurso extends javax.swing.JFrame {
                 int[] notas = alumno.getNotas(); // Usamos el getter para obtener las notas
                 txtNota1.setText(String.valueOf(notas[0]));
                 txtNota2.setText(String.valueOf(notas[1]));
-                txtNota4.setText(String.valueOf(notas[2]));
-                txtNota3.setText(String.valueOf(notas[3]));
+                txtNota3.setText(String.valueOf(notas[2]));
+                txtNota4.setText(String.valueOf(notas[3]));
                 return;
             }
             alumnosCurso = alumnosCurso.siguiente;
